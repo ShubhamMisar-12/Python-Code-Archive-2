@@ -76,19 +76,17 @@
         },
         {
             "name": "test_part2_step01 (test_assignment6.TestAssignment6.test_part2_step01)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: Lists differ: [['no[1096 chars]'Ryan Sanchez'], ['au5735', 'Autumn', 'Robinso[2119 chars]tt']] != [['no[1096 chars]'RyanSanchez'], ['au5735', 'Autumn', 'Robinson[2115 chars]tt']]\n\nFirst differing element 33:\n['mr3745', 'Mr.', 'Ryan Sanchez']\n['mr3745', 'Mr.', 'RyanSanchez']\n\nDiff is 3786 characters long. Set self.maxDiff to None to see it.\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "part2_step01"
         },
         {
             "name": "test_part2_step02 (test_assignment6.TestAssignment6.test_part2_step02)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "part2_step02"
         },
@@ -97,7 +95,7 @@
             "score": 0.0,
             "max_score": 3,
             "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "output": "Test Failed: Lists differ: [[34.45, 8.38, 35.0, 9.0, 0.55, 0.62], [74.6, 14.96, [286 chars].24]] != [[34.45, 8.376705314095268, 35.0, 9.0, 0.549999999999[662 chars]876]]\n\nFirst differing element 0:\n[34.45, 8.38, 35.0, 9.0, 0.55, 0.62]\n[34.45, 8.376705314095268, 35.0, 9.0, 0.5499999999999972, 0.6232946859047317]\n\nDiff is 1178 characters long. Set self.maxDiff to None to see it.\n",
             "visibility": "visible",
             "number": "part2_step03"
         },
@@ -131,6 +129,6 @@
     ],
     "leaderboard": [],
     "visibility": "visible",
-    "execution_time": "0.32",
-    "score": 27.0
+    "execution_time": "0.28",
+    "score": 33.0
 }

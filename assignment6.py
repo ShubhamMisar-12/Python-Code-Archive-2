@@ -238,13 +238,31 @@ def part2_step2():
     # ---- DO NOT CHANGE
 
     # BEGIN SOLUTION
-    pass
+    mu = [35, 75, 25, 45, 45, 75, 25, 45, 35]
+    sigma = [9, 15, 7, 10, 5, 20, 8, 9, 10]
+    max_score = [50, 100, 40, 60, 50, 100, 50, 60, 50]
+
+    # Generate the scores using a normal distribution
+    scores = np.random.normal(mu, sigma, size = (100,9))
+    scores = np.round(scores)
+    scores_clip = np.clip(scores,0,max_score)
+    lst = scores_clip.T
+    dic = {'Hw1' : lst[0] ,'Hw2': lst[1],'Hw3': lst[2], 'Hw4': lst[3], 'Hw5': lst[4], 'Exam1': lst[5], 'Exam2': lst[6], 'Exam3':lst[7] , 'Exam4': lst[8]}
+    df2 = pd.DataFrame.from_dict(dic)
+    return df2
     # END SOLUTION
 
 
 def part2_step3(df2_scores):
     # BEGIN SOLUTION
-    pass
+    mu = [35, 75, 25, 45, 45, 75, 25, 45, 35]
+    sigma = [9, 15, 7, 10, 5, 20, 8, 9, 10]
+    df_des = df2_scores.describe().T.drop(['count','min','25%','50%','75%','max'], axis = 1)
+    df_des['mean_theoretical'] = mu
+    df_des['std_theoretical'] = sigma
+    df_des['abs_mean_diff'] = abs(df_des['mean'] - df_des['mean_theoretical'])
+    df_des['abs_std_diff'] = abs(df_des['std'] - df_des['std_theoretical'])
+    return df_des
     # END SOLUTION
 
 
