@@ -77,7 +77,10 @@ def create_df_students(non_normalized_db_filename):
     """
 
     # BEGIN SOLUTION
-    pass
+    df[['Last_Name','First_Name']] = df['Name'].str.split(', ', expand=True)
+    df['StudentID'] = df['StudentID'].apply(lambda x: int(x))
+    return df[['StudentID','First_Name','Last_Name','Degree'] ]
+    
     # END SOLUTION
 
 
@@ -89,7 +92,15 @@ def create_df_studentexamscores(non_normalized_db_filename, df_students):
     """
 
     # BEGIN SOLUTION
-    pass
+    student_exam_scores = []
+    for index, data in df.iterrows():
+        lst = data.values    
+        my_lst = list(map(lambda x: (x.split(" ")[0]), lst[3].split(', ')))
+        my_lst2 = list(map(lambda x: int(x.split(" ")[0]), lst[4].split(', ')))
+        for i in range(0,len(my_lst)):
+            student_exam_scores.append([int(lst[0]),my_lst[i], my_lst2[i]])
+    dic = {'StudentID' : [ey[0] for ey in student_exam_scores], 'Exam': [ey[1] for ey in student_exam_scores], 'Score': [ey[2] for ey in student_exam_scores]}
+    return pd.DataFrame.from_dict(dic)
     # END SOLUTION
 
 
