@@ -137,12 +137,22 @@ def ex3(df_studentexamscores, df_exams):
     """
 
     # BEGIN SOLUTION
-    df3 = pd.merge(df_studentexamscores, df_exams, on = 'Exam').groupby(['Exam','Year']).mean().round(2).reset_index()
-    df3 = df3.sort_values(by = 'Score', ascending = False).drop('StudentID', axis = 1)
-    df3 = df3.rename(columns = {'Score': 'average'})
-    df3.reset_index(drop=True, inplace = True)
+    # df3 = pd.merge(df_studentexamscores, df_exams, on = 'Exam').groupby(['Exam','Year']).mean().round(2).reset_index()
+    # df3 = df3.sort_values(by = 'Score', ascending = False).drop('StudentID', axis = 1)
+    # df3 = df3.rename(columns = {'Score': 'average'})
+    # df3.reset_index(drop=True, inplace = True)
     # END SOLUTION
-    return df3
+    df = pd.merge(df_studentexamscores, df_exams, on = 'Exam')
+    df_average = df.groupby(["Exam", "Year"])["Score"].mean().round(2).reset_index()
+    df_average.sort_values(by = "Score", ascending = False, inplace = True)
+    #df_average['Score'] = df_average['Score'].astype('int32')
+    df_average["Score"].astype("int32")
+    df_average["Year"] = df_average["Year"].astype("int32")
+
+
+    df_average = df_average.rename(columns = {"Score": "average"})
+    df_average.set_index("Exam", inplace = True)
+    return df_average
 
 
 def ex4(df_studentexamscores, df_students):
@@ -156,13 +166,12 @@ def ex4(df_studentexamscores, df_students):
     """
 
     # BEGIN SOLUTION
-    df = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['Degree']).mean().round(2).reset_index()
+    df = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['Degree']).mean().round(2)
     df = df.rename(columns = {'Score': 'Average'})
-    df = df.drop(['StudentID'], axis = 1)
- 
-    # END SOLUTION
+    df = df['Average'].to_frame()
     return df
-
+    # END SOLUTION
+    
 
 def ex5(df_studentexamscores, df_students):
     """
@@ -202,7 +211,22 @@ def part2_step1():
     # ---- DO NOT CHANGE
 
     # BEGIN SOLUTION
-    pass
+    first_name = []
+    last_name = []
+    user_name = []
+    for _ in range(100):
+        name = fake.name().split(" ")
+        num = str(np.random.randint(1000,9999))
+        first_name.append(name[0])
+        last_name.append(' '.join(name[1:]))
+        u_name = name[0].lower()[0:2]+num
+        #print(u_name)
+        user_name.append(u_name)
+        #print([np.random.randint(1000,9999) for i in range(4)])
+
+    dic = {'username' : user_name, 'first_name': first_name , 'last_name': last_name}
+    df = pd.DataFrame.from_dict(dic)
+    return df
     # END SOLUTION
     
 
