@@ -50,19 +50,18 @@
         },
         {
             "name": "test_ex3 (test_assignment6.TestAssignment6.test_ex3)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: False != True\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "ex3"
         },
         {
             "name": "test_ex4 (test_assignment6.TestAssignment6.test_ex4)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:159: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.\n  df = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['Degree']).mean().round(2).reset_index()\n\nTest Failed: False != True\n",
+            "status": "passed",
+            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:169: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.\n  df = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['Degree']).mean().round(2)\n",
             "visibility": "visible",
             "number": "ex4"
         },
@@ -71,7 +70,7 @@
             "score": 3,
             "max_score": 3,
             "status": "passed",
-            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:175: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.\n  df5 = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['StudentID']).mean().round(2).reset_index()\n",
+            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:186: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.\n  df5 = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['StudentID']).mean().round(2).reset_index()\n",
             "visibility": "visible",
             "number": "ex5"
         },
@@ -80,7 +79,7 @@
             "score": 0.0,
             "max_score": 3,
             "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "output": "Test Failed: Lists differ: [['no[1096 chars]'Ryan Sanchez'], ['au5735', 'Autumn', 'Robinso[2119 chars]tt']] != [['no[1096 chars]'RyanSanchez'], ['au5735', 'Autumn', 'Robinson[2115 chars]tt']]\n\nFirst differing element 33:\n['mr3745', 'Mr.', 'Ryan Sanchez']\n['mr3745', 'Mr.', 'RyanSanchez']\n\nDiff is 3786 characters long. Set self.maxDiff to None to see it.\n",
             "visibility": "visible",
             "number": "part2_step01"
         },
@@ -132,6 +131,6 @@
     ],
     "leaderboard": [],
     "visibility": "visible",
-    "execution_time": "0.12",
-    "score": 21.0
+    "execution_time": "0.32",
+    "score": 27.0
 }
