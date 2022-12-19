@@ -109,7 +109,7 @@ def ex1(df_exams):
     return df_exams sorted by year
     """
     # BEGIN SOLUTION
-    pass
+    df_exams.sort_values(by='Year', inplace = True)
     # END SOLUTION
     return df_exams
 
@@ -120,7 +120,8 @@ def ex2(df_students):
     # NOTE -- rename name the degree column to Count!!!
     """
     # BEGIN SOLUTION
-    pass
+    df = df_students['Degree'].value_counts().to_frame()
+    df.columns = [["Count"]]
     # END SOLUTION
     return df
 
@@ -136,9 +137,12 @@ def ex3(df_studentexamscores, df_exams):
     """
 
     # BEGIN SOLUTION
-    pass
+    df3 = pd.merge(df_studentexamscores, df_exams, on = 'Exam').groupby(['Exam','Year']).mean().round(2).reset_index()
+    df3 = df3.sort_values(by = 'Score', ascending = False).drop('StudentID', axis = 1)
+    df3 = df3.rename(columns = {'Score': 'average'})
+    df3.reset_index(drop=True, inplace = True)
     # END SOLUTION
-    return df
+    return df3
 
 
 def ex4(df_studentexamscores, df_students):
@@ -152,7 +156,10 @@ def ex4(df_studentexamscores, df_students):
     """
 
     # BEGIN SOLUTION
-    pass
+    df = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['Degree']).mean().round(2).reset_index()
+    df = df.rename(columns = {'Score': 'Average'})
+    df = df.drop(['StudentID'], axis = 1)
+ 
     # END SOLUTION
     return df
 
@@ -167,7 +174,12 @@ def ex5(df_studentexamscores, df_students):
     """
 
     # BEGIN SOLUTION
-    pass
+    df5 = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['StudentID']).mean().round(2).reset_index()
+    df_sort = df5.sort_values(by = 'Score', ascending = False)
+    df_sort = df_sort.rename(columns = {'Score': 'average'})
+    df6 = pd.merge(df_sort, df_students, on = 'StudentID')
+    df = df6.loc[0:9,['First_Name', 'Last_Name', 'Degree','average']]
+    return df
     # END SOLUTION
 
 

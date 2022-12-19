@@ -10,46 +10,41 @@
         },
         {
             "name": "test_02_df_exams (test_assignment6.TestAssignment6.test_02_df_exams)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'equals'\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "02_df_exams"
         },
         {
             "name": "test_03_df_students (test_assignment6.TestAssignment6.test_03_df_students)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'equals'\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "03_df_students"
         },
         {
             "name": "test_04_df_studentexamscores (test_assignment6.TestAssignment6.test_04_df_studentexamscores)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'equals'\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "04_df_studentexamscores"
         },
         {
             "name": "test_ex1 (test_assignment6.TestAssignment6.test_ex1)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'reset_index'\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "ex1"
         },
         {
             "name": "test_ex2 (test_assignment6.TestAssignment6.test_ex2)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: False != True\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "ex2"
         },
@@ -58,7 +53,7 @@
             "score": 0.0,
             "max_score": 3,
             "status": "failed",
-            "output": "Test Failed: 'Year'\n",
+            "output": "Test Failed: False != True\n",
             "visibility": "visible",
             "number": "ex3"
         },
@@ -67,16 +62,16 @@
             "score": 0.0,
             "max_score": 3,
             "status": "failed",
-            "output": "Test Failed: False != True\n",
+            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:159: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.\n  df = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['Degree']).mean().round(2).reset_index()\n\nTest Failed: False != True\n",
             "visibility": "visible",
             "number": "ex4"
         },
         {
             "name": "test_ex5 (test_assignment6.TestAssignment6.test_ex5)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "status": "passed",
+            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:175: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.\n  df5 = pd.merge(df_studentexamscores, df_students, on = 'StudentID').groupby(['StudentID']).mean().round(2).reset_index()\n",
             "visibility": "visible",
             "number": "ex5"
         },
@@ -137,6 +132,6 @@
     ],
     "leaderboard": [],
     "visibility": "visible",
-    "execution_time": "0.13",
-    "score": 3.0
+    "execution_time": "0.12",
+    "score": 21.0
 }
