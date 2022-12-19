@@ -1,5 +1,4 @@
 import sqlite3
-
 import numpy as np
 import pandas as pd
 from faker import Faker
@@ -33,7 +32,11 @@ def create_df_degrees(non_normalized_db_filename):
     """
 
     # BEGIN SOLUTION
-    pass
+    conn = create_connection(non_normalized_db_filename)
+    sql_statement = "SELECT DISTINCT Degree FROM Students"
+    df = pd.read_sql_query(sql_statement, conn)
+    conn.close()
+    return df
     # END SOLUTION
 
 
@@ -47,7 +50,20 @@ def create_df_exams(non_normalized_db_filename):
     """
 
     # BEGIN SOLUTION
-    pass
+    exam_year = []
+    for index, data in df.iterrows():
+        lst = data.values
+        my_lst = list(map(lambda x: (x.split(" ")[0], int(x.split(" ")[1][1:-1])), lst[3].split(', ')))
+        #print(my_lst)
+        for i in my_lst:
+            if i not in exam_year:
+                exam_year.append(i)
+    dic = {'Exam' : [ey[0] for ey in exam_year], 'Year': [ey[1] for ey in exam_year]}
+    df2 = pd.DataFrame.from_dict(dic)
+    return df2.sort_values(by=['Exam']).reset_index(drop = True)
+
+    
+
     # END SOLUTION
 
 

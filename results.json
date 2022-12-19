@@ -1,0 +1,142 @@
+{
+    "tests": [
+        {
+            "name": "test_01_df_degrees (test_assignment6.TestAssignment6.test_01_df_degrees)",
+            "score": 3,
+            "max_score": 3,
+            "status": "passed",
+            "visibility": "visible",
+            "number": "01_df_degrees"
+        },
+        {
+            "name": "test_02_df_exams (test_assignment6.TestAssignment6.test_02_df_exams)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'equals'\n",
+            "visibility": "visible",
+            "number": "02_df_exams"
+        },
+        {
+            "name": "test_03_df_students (test_assignment6.TestAssignment6.test_03_df_students)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'equals'\n",
+            "visibility": "visible",
+            "number": "03_df_students"
+        },
+        {
+            "name": "test_04_df_studentexamscores (test_assignment6.TestAssignment6.test_04_df_studentexamscores)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'equals'\n",
+            "visibility": "visible",
+            "number": "04_df_studentexamscores"
+        },
+        {
+            "name": "test_ex1 (test_assignment6.TestAssignment6.test_ex1)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'reset_index'\n",
+            "visibility": "visible",
+            "number": "ex1"
+        },
+        {
+            "name": "test_ex2 (test_assignment6.TestAssignment6.test_ex2)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: False != True\n",
+            "visibility": "visible",
+            "number": "ex2"
+        },
+        {
+            "name": "test_ex3 (test_assignment6.TestAssignment6.test_ex3)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'Year'\n",
+            "visibility": "visible",
+            "number": "ex3"
+        },
+        {
+            "name": "test_ex4 (test_assignment6.TestAssignment6.test_ex4)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: False != True\n",
+            "visibility": "visible",
+            "number": "ex4"
+        },
+        {
+            "name": "test_ex5 (test_assignment6.TestAssignment6.test_ex5)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "ex5"
+        },
+        {
+            "name": "test_part2_step01 (test_assignment6.TestAssignment6.test_part2_step01)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "part2_step01"
+        },
+        {
+            "name": "test_part2_step02 (test_assignment6.TestAssignment6.test_part2_step02)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "part2_step02"
+        },
+        {
+            "name": "test_part2_step03 (test_assignment6.TestAssignment6.test_part2_step03)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "part2_step03"
+        },
+        {
+            "name": "test_part2_step04 (test_assignment6.TestAssignment6.test_part2_step04)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "part2_step04"
+        },
+        {
+            "name": "test_part2_step05 (test_assignment6.TestAssignment6.test_part2_step05)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "part2_step05"
+        },
+        {
+            "name": "test_part2_step06 (test_assignment6.TestAssignment6.test_part2_step06)",
+            "score": 0.0,
+            "max_score": 3,
+            "status": "failed",
+            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "visibility": "visible",
+            "number": "part2_step06"
+        }
+    ],
+    "leaderboard": [],
+    "visibility": "visible",
+    "execution_time": "0.13",
+    "score": 3.0
+}
