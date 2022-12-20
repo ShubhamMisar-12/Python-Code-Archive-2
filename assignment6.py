@@ -142,18 +142,18 @@ def ex3(df_studentexamscores, df_exams):
     # df3 = df3.rename(columns = {'Score': 'average'})
     # df3.reset_index(drop=True, inplace = True)
     # END SOLUTION
-    df = pd.merge(df_studentexamscores, df_exams, on = 'Exam')
-    df_average = df.groupby(["Exam", "Year"])["Score"].mean().round(2).reset_index()
-    df_average.sort_values(by = "Score", ascending = False, inplace = True)
+    df = pd.merge(df_studentexamscores, df_exams, on = 'Exam').groupby(['Exam','Year'])["Score"].mean().round(2).reset_index()
+    #df_average = df.groupby(["Exam", "Year"])["Score"].mean().round(2).reset_index()
+    df.sort_values(by = "Score", ascending = False, inplace = True)
     #df_average['Score'] = df_average['Score'].astype('int32')
-    df_average["Score"].astype("int32")
-    df_average["Year"] = df_average["Year"].astype("int32")
+    df["Year"] = df["Year"].astype("int32")
+    df["Score"].astype("int32")
+    
+    df.set_index("Exam", inplace = True)
 
-
-    df_average = df_average.rename(columns = {"Score": "average"})
-    df_average.set_index("Exam", inplace = True)
-    return df_average
-
+    return df.rename(columns = {"Score": "average"})
+    
+    
 
 def ex4(df_studentexamscores, df_students):
     """
