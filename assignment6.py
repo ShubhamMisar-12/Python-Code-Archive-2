@@ -257,24 +257,50 @@ def part2_step3(df2_scores):
     # BEGIN SOLUTION
     mu = [35, 75, 25, 45, 45, 75, 25, 45, 35]
     sigma = [9, 15, 7, 10, 5, 20, 8, 9, 10]
-    df_des = df2_scores.describe().T.drop(['count','min','25%','50%','75%','max'], axis = 1)
+    df_des = df2_scores.describe().T.drop(['count','min','25%','50%','75%','max'], axis = 1).round(2)
     df_des['mean_theoretical'] = mu
     df_des['std_theoretical'] = sigma
-    df_des['abs_mean_diff'] = abs(df_des['mean'] - df_des['mean_theoretical'])
-    df_des['abs_std_diff'] = abs(df_des['std'] - df_des['std_theoretical'])
+    df_des['abs_mean_diff'] = abs(df_des['mean'] - df_des['mean_theoretical']).round(2)
+    df_des['abs_std_diff'] = abs(df_des['std'] - df_des['std_theoretical']).round(2)
     return df_des
     # END SOLUTION
 
 
 def part2_step4(df2_students, df2_scores, ):
     # BEGIN SOLUTION
-    pass
+    max_score = [50, 100, 40, 60, 50, 100, 50, 60, 50]
+    df2_students['Hw1'] = ((df2_scores['Hw1']/max_score[0])*100).round()
+    df2_students['Hw2'] = ((df2_scores['Hw2']/max_score[1])*100).round()
+    df2_students['Hw3'] = ((df2_scores['Hw3']/max_score[2])*100).round()
+    df2_students['Hw4'] = ((df2_scores['Hw4']/max_score[3])*100).round()
+    df2_students['Hw5'] = ((df2_scores['Hw5']/max_score[4])*100).round()
+    df2_students['Exam1'] = ((df2_scores['Exam1']/max_score[5])*100).round()
+    df2_students['Exam2'] = ((df2_scores['Exam2']/max_score[6])*100).round()
+    df2_students['Exam3'] = ((df2_scores['Exam3']/max_score[7])*100).round()
+    df2_students['Exam4'] = ((df2_scores['Exam4']/max_score[8])*100).round()
+    return df2_students.round()
     # END SOLUTION
 
 
 def part2_step5():
     # BEGIN SOLUTION
-    pass
+    df = pd.read_csv('part2_step5-input.csv')
+    dfhw2 = df[df.iloc[:,4] == 'AI_ISSUE']
+    dfhw3 = df[df.iloc[:,5] == 'AI_ISSUE']
+    dfhw4 = df[df.iloc[:,6] == 'AI_ISSUE']
+    dfhw5 = df[df.iloc[:,7] == 'AI_ISSUE']
+    dfex1 = df[df.iloc[:,8] == 'AI_ISSUE']
+    dfex2 = df[df.iloc[:,9] == 'AI_ISSUE']
+    dfex3 = df[df.iloc[:,10] == 'AI_ISSUE']
+    dfex4 = df[df.iloc[:,11] == 'AI_ISSUE']
+    pd5 = pd.concat([dfhw2,dfhw3,dfhw4,dfhw5,dfex1,dfex2,dfex3,dfex4], axis=0)
+    pd5['index1'] = pd5.index
+    pd6 = pd5.groupby(pd5.columns.tolist(),as_index=False).size()
+    pd6.sort_values(by = 'index1',inplace = True)
+    #print(pd6)
+    pd6 = pd6.rename(columns ={'size':'AI_Count'})
+    return pd6[['username','first_name','last_name','AI_Count']].reset_index(drop = True)
+
     # END SOLUTION
 
 

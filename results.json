@@ -92,28 +92,26 @@
         },
         {
             "name": "test_part2_step03 (test_assignment6.TestAssignment6.test_part2_step03)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: Lists differ: [[34.45, 8.38, 35.0, 9.0, 0.55, 0.62], [74.6, 14.96, [286 chars].24]] != [[34.45, 8.376705314095268, 35.0, 9.0, 0.549999999999[662 chars]876]]\n\nFirst differing element 0:\n[34.45, 8.38, 35.0, 9.0, 0.55, 0.62]\n[34.45, 8.376705314095268, 35.0, 9.0, 0.5499999999999972, 0.6232946859047317]\n\nDiff is 1178 characters long. Set self.maxDiff to None to see it.\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "part2_step03"
         },
         {
             "name": "test_part2_step04 (test_assignment6.TestAssignment6.test_part2_step04)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "status": "passed",
             "visibility": "visible",
             "number": "part2_step04"
         },
         {
             "name": "test_part2_step05 (test_assignment6.TestAssignment6.test_part2_step05)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: 'NoneType' object has no attribute 'values'\n",
+            "status": "passed",
+            "output": "   username first_name last_name    Hw1       Hw2       Hw3       Hw4    Hw5     Exam1     Exam2     Exam3  Exam4  index1  size\n2    el5859  Elizabeth     Woods   88.0  AI_ISSUE      82.0      73.0   98.0      97.0  AI_ISSUE      63.0   68.0       2     2\n10   st4468  Stephanie    Sutton   68.0      64.0      50.0      53.0   90.0  AI_ISSUE      24.0      75.0   70.0       7     1\n0    bo3163      Bobby    Flores   66.0      73.0  AI_ISSUE      70.0   92.0      96.0      56.0      68.0  100.0      17     1\n7    ki8877   Kimberly   Maynard   24.0      81.0      45.0      63.0  100.0      71.0  AI_ISSUE      70.0   70.0      20     1\n6    ki1797   Kimberly     Myers   66.0     100.0      68.0  AI_ISSUE   62.0     100.0      76.0      93.0  100.0      27     1\n11   wh8456    Whitney     Stark   76.0      83.0      55.0      55.0   76.0  AI_ISSUE      48.0      63.0   90.0      31     1\n3    ja5187      Jason   Carroll   48.0      63.0      57.0  AI_ISSUE   92.0      70.0      58.0     100.0   42.0      53     1\n1    do5420    Douglas     Allen   76.0      59.0      38.0      67.0   68.0      75.0      28.0  AI_ISSUE   62.0      57     1\n5    jo9752     Joseph   Freeman   78.0      52.0      65.0      68.0   82.0      87.0  AI_ISSUE      75.0   76.0      67     1\n4    jo3610     Joshua    Carter   92.0      79.0      55.0      72.0   86.0      84.0      66.0  AI_ISSUE   80.0      91     1\n9    mi1307    Michael   Simmons  100.0      87.0      72.0      93.0   84.0      71.0      38.0  AI_ISSUE   40.0      97     1\n8    lo2152       Lori   Bennett   78.0      95.0      70.0  AI_ISSUE   90.0      71.0      68.0      63.0   62.0      99     1\n",
             "visibility": "visible",
             "number": "part2_step05"
         },
@@ -129,6 +127,6 @@
     ],
     "leaderboard": [],
     "visibility": "visible",
-    "execution_time": "0.28",
-    "score": 33.0
+    "execution_time": "0.22",
+    "score": 42.0
 }
