@@ -306,5 +306,6 @@ def part2_step5():
 
 def part2_step6():
     # BEGIN SOLUTION
-    pass
+    df = pd.read_csv('part2_step5-input.csv')
+    pd.replace()    
     # END SOLUTION
