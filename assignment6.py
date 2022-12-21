@@ -305,7 +305,41 @@ def part2_step5():
 
 
 def part2_step6():
-    # BEGIN SOLUTION
     df = pd.read_csv('part2_step5-input.csv')
-    pd.replace()    
+    df = df.replace('AI_ISSUE',0)
+    df1 = df[['Hw1', 'Hw2', 'Hw3', 'Hw4', 'Hw5'] ]
+    df1 = df1.astype('float')
+    df1 = df1.T.fillna(df1.mean(axis=1)).T.round()
+    df2 = df[['Exam1', 'Exam2', 'Exam3', 'Exam4'] ]
+    df2 = df2.astype('float')
+    df2 = df2.T.fillna(df2.mean(axis=1)).T.round()
+    df[['Hw1', 'Hw2', 'Hw3', 'Hw4', 'Hw5']] = df1
+    df[['Exam1', 'Exam2', 'Exam3', 'Exam4'] ] = df2
+    df['Grade'] = df.iloc[:,3:8].sum(axis = 1)*.05 + df.iloc[:,8:11].sum(axis = 1)*.2 + df.iloc[:,11]*.15
+    df = df.round()
+    def get_grade(score):
+        if score >= 80:
+            return 'A'
+        elif score >= 70:
+            return 'B'
+        elif score >= 50:
+            return 'C'
+        elif score >= 40:
+            return 'D'
+        else:
+            return 'E'
+    df['LetterGrade'] = df['Grade'].apply(lambda x: get_grade(x))
+    names_series = ['Hw1', 'Hw2', 'Hw3', 'Hw4', 'Hw5', 'Exam1', 'Exam2', 'Exam3', 'Exam4', 'Grade']
+    mean_series = df.describe().T['mean'].round()
+    mean = dict(zip(names_series, mean_series))
+    df = df.append(mean, ignore_index = True)
+    names_series = ['Hw1', 'Hw2', 'Hw3', 'Hw4', 'Hw5', 'Exam1', 'Exam2', 'Exam3', 'Exam4', 'Grade']
+    std_deviation = df.iloc[0:-1,:].describe().T['std'].round()
+    std_deviation = dict(zip(names_series, std_deviation))
+    df = df.append(std_deviation, ignore_index = True)
+    df.rename({100: "mean", 101: "std"}, inplace = True)
+    df.index = df.index.astype(str)
+    return df
+
+ 
     # END SOLUTION

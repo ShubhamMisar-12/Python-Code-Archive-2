@@ -116,16 +116,16 @@
         },
         {
             "name": "test_part2_step06 (test_assignment6.TestAssignment6.test_part2_step06)",
-            "score": 0.0,
+            "score": 3,
             "max_score": 3,
-            "status": "failed",
-            "output": "Test Failed: module 'pandas' has no attribute 'replace'\n",
+            "status": "passed",
+            "output": "\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:335: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.\n  df = df.append(mean, ignore_index = True)\nc:\\Users\\shubh\\Downloads\\GitHub Repos\\Python Assignement\\assignment6\\assignment6.py:339: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.\n  df = df.append(std_deviation, ignore_index = True)\n",
             "visibility": "visible",
             "number": "part2_step06"
         }
     ],
     "leaderboard": [],
     "visibility": "visible",
-    "execution_time": "0.25",
-    "score": 42.0
+    "execution_time": "0.38",
+    "score": 45
 }
